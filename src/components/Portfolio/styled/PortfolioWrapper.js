@@ -12,6 +12,10 @@ const PortfolioWrapper = styled.section`
 
   h3 {
     margin: 25px 0;
+
+    a {
+      font-size: 2.8rem;
+    }
   }
 `;
 

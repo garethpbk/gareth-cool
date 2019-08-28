@@ -40,6 +40,10 @@ const GlobalStyles = createGlobalStyle`
   input, label, select {
     font-family: Quicksand, Arial, Helvetica, sans-serif;
   }
+
+  img {
+    max-width: 100%;
+  }
 `;
 
 export default GlobalStyles;

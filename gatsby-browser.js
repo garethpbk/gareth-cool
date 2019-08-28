@@ -1,11 +1,11 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from 'react';
 
-// You can delete this file if you're not using it
+// import typeface
+import 'typeface-quicksand';
 
-require('typeface-quicksand');
+// import context provider components
+import CoolContext from './src/components/Context';
 
-exports.onClientEntry = () => {};
+export const wrapPageElement = ({ element, props }) => (
+  <CoolContext {...props}>{element}</CoolContext>
+);

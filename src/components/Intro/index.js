@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+
+import { SuperCoolContext } from '../Context';
 
 // import components
 import IntroAnimatedText from './IntroAnimatedText';
@@ -7,12 +9,22 @@ import IntroAnimatedText from './IntroAnimatedText';
 import { IntroHeading, IntroWrapper } from './styled';
 
 function Intro() {
+  const {
+    state: { animationPlayed },
+    functions: { setAnimationPlayed },
+  } = useContext(SuperCoolContext);
+
   const [heightProp, setHeightProp] = useState('100vh');
 
   useEffect(() => {
-    setTimeout(() => {
+    if (animationPlayed) {
       setHeightProp('25vh');
-    }, 3000);
+    } else {
+      setTimeout(() => {
+        setAnimationPlayed(true);
+        setHeightProp('25vh');
+      }, 3000);
+    }
   }, []);
 
   return (

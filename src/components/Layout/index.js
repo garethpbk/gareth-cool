@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // import global styles
-import { GlobalStyles } from '../styled';
+import { Container, GlobalStyles } from '../styled';
 
 function Layout({ children }) {
   return (
     <>
       <GlobalStyles />
-      <main>{children}</main>
+      <main>
+        <Container>{children}</Container>
+      </main>
     </>
   );
 }

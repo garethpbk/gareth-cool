@@ -8,11 +8,13 @@ import { Layout, SEO } from '../components';
 function BlogPostTemplate({
   data: {
     markdownRemark: {
+      fields: { slug },
       frontmatter: { date, image, tags, title },
       html,
     },
   },
 }) {
+  console.log(slug);
   return (
     <Layout>
       <SEO title="blog post" />
@@ -35,6 +37,9 @@ export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         date
         tags
