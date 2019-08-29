@@ -64,16 +64,6 @@ Ok, this doesn't look too bad - `{value => ()}` is perfectly readable. But what 
 
 Here's the render method for a component called `<ContextOneParent />`:
 
-<<<<<<< HEAD
-
-````
-render() {
-    return (
-      <ContextOne.Provider value={this.state.firstValue}>
-        <ContextTwoParent />
-      </ContextOne.Provider>
-    );
-=======
 ```javascript
 render() {
     return (
@@ -81,22 +71,11 @@ render() {
         <ContextTwoParent />
       </ContextOne.Provider>
     );
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
   }
-````
+```
 
 Next `<ContextTwoParent /`>`:
 
-<<<<<<< HEAD
-
-````
-render() {
-    return (
-      <ContextTwo.Provider value={this.state.secondValue}>
-        <ContextThreeParent />
-      </ContextTwo.Provider>
-    );
-=======
 ```javascript
 render() {
     return (
@@ -104,22 +83,11 @@ render() {
         <ContextThreeParent />
       </ContextTwo.Provider>
     );
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
   }
-````
+```
 
 And a third context provider component:
 
-<<<<<<< HEAD
-
-````
-render() {
-    return (
-      <ContextThree.Provider value={this.state.thirdValue}>
-        <ContextChild />
-      </ContextThree.Provider>
-    );
-=======
 ```javascript
 render() {
     return (
@@ -127,40 +95,11 @@ render() {
         <ContextChild />
       </ContextThree.Provider>
     );
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
   }
-````
+```
 
 So we've got three different context providers now, nested inside of each other. The goal of this is to give `<ContextChild />` access to values from all three.
 
-<<<<<<< HEAD
-
-````
-function ContextChild() {
-  return (
-    <ContextOne.Consumer>
-      {value => (
-        <div>
-          <p>{value}</p>
-          <ContextTwo.Consumer>
-            {value => (
-              <div>
-                <p>{value}</p>
-                <ContextThree.Consumer>
-                  {value => (
-                    <div>
-                      <p>{value}</p>
-                    </div>
-                  )}
-                </ContextThree.Consumer>
-              </div>
-            )}
-          </ContextTwo.Consumer>
-        </div>
-      )}
-    </ContextOne.Consumer>
-  );
-=======
 ```javascript
 function ContextChild() {
   return (
@@ -186,9 +125,8 @@ function ContextChild() {
       )}
     </ContextOne.Consumer>
   );
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
 }
-````
+```
 
 😱😱😱
 
@@ -204,37 +142,6 @@ This also creates a **false hierarchy** where it appears that the values of the 
 
 Let's see now how React hooks make context fun again. In this example I'll show the whole component along with creating the context provider - we're also using `useState()` for state. Rather than returning a specific component, it also uses `props.children` to create a reusable component that can wrap anything.
 
-<<<<<<< HEAD
-
-````
-export const HookContext = createContext();
-
-function HookProvider(props) {
-  const [name, setName] = useState('Fido');
-  const [item, setItem] = useState('BALL');
-
-  const fetchItem = item => {
-    const capitalizedItem = item.toUpperCase();
-    setItem(capitalizedItem);
-  };
-
-  const contextValues = {
-    state: {
-      name,
-      item,
-    },
-    functions: {
-      setName,
-      fetchItem,
-    },
-  };
-
-  return (
-    <HookContext.Provider value={contextValues}>
-      {props.children}
-    </HookContext.Provider>
-  );
-=======
 ```javascript
 export const HookContext = createContext();
 
@@ -263,70 +170,29 @@ function HookProvider(props) {
       {props.children}
     </HookContext.Provider>
   );
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
 }
-````
+```
 
 Here's how to use this, with another component that returns the context component, wrapping its children:
 
-<<<<<<< HEAD
-
-````
-const HookContainer = () => (
-  <HookProvider>
-    <HookFirstChild />
-  </HookProvider>
-=======
 ```javascript
 const HookContainer = () => (
   <HookProvider>
     <HookFirstChild />
   </HookProvider>
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
 );
-````
+```
 
 As in the first set of example components, the first child just returns another component:
 
-<<<<<<< HEAD
-
-````
-const HookFirstChild = () => (
-  <HookSecondChild />
-=======
 ```javascript
 const HookFirstChild = () => (
   <HookSecondChild />
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
 );
-````
+```
 
 Finally we can see `useContext()` in action! It takes one value, the object created by `createContext()`, and allows for access to anything passed into that context provider's `value` prop, in this case destructured:
 
-<<<<<<< HEAD
-
-````
-const HookSecondChild = () => {
-  const { state, functions } = useContext(HookContext);
-
-  return (
-    <div>
-      <p>
-        <strong>{state.name}</strong> fetches the <em>{state.item}</em>.
-      </p>
-      <div>
-        <label htmlFor="name">Set Name</label>
-        <br />
-        <input type="text" name="name" onChange={e => functions.setName(e.target.value)} />
-      </div>
-      <div>
-        <label htmlFor="item">Set Item</label>
-        <br />
-        <input type="text" name="item" onChange={e => functions.fetchItem(e.target.value)} />
-      </div>
-    </div>
-  );
-=======
 ```javascript
 const HookSecondChild = () => {
   const { state, functions } = useContext(HookContext);
@@ -348,40 +214,11 @@ const HookSecondChild = () => {
       </div>
     </div>
   );
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
 };
-````
+```
 
 This isn't too much an improvement on render props, but I do think it's cleaner. The real value starts to show itself when you have multiple contexts. Remember this thing from above?
 
-<<<<<<< HEAD
-
-````
-function ContextChild() {
-  return (
-    <ContextOne.Consumer>
-      {value => (
-        <div>
-          <p>{value}</p>
-          <ContextTwo.Consumer>
-            {value => (
-              <div>
-                <p>{value}</p>
-                <ContextThree.Consumer>
-                  {value => (
-                    <div>
-                      <p>{value}</p>
-                    </div>
-                  )}
-                </ContextThree.Consumer>
-              </div>
-            )}
-          </ContextTwo.Consumer>
-        </div>
-      )}
-    </ContextOne.Consumer>
-  );
-=======
 ```javascript
 function ContextChild() {
   return (
@@ -407,28 +244,11 @@ function ContextChild() {
       )}
     </ContextOne.Consumer>
   );
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
 }
-````
+```
 
 Here's what it looks like with hooks:
 
-<<<<<<< HEAD
-
-````
-function ContextHookChild() {
-  const firstValue = useContext(ContextOne);
-  const secondValue = useContext(ContextTwo);
-  const thirdValue = useContext(ContextThree);
-
-  return (
-    <div>
-      <p>{firstValue}</p>
-      <p>{secondValue}</p>
-      <p>{thirdValue}</p>
-    </div>
-  );
-=======
 ```javascript
 function ContextHookChild() {
   const firstValue = useContext(ContextOne);
@@ -442,9 +262,8 @@ function ContextHookChild() {
       <p>{thirdValue}</p>
     </div>
   );
->>>>>>> f9ae5271baacc847c0c0fbbc3536d6686dbcc4a5
 }
-````
+```
 
 😂😂😂
 
