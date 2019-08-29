@@ -10,17 +10,17 @@ image: /assets/fishing-rod.jpg
 ---
 _This is an adaptation of a talk I gave on March 13, 2019 at the_ [_San Diego JavaScript_](https://www.sandiegojs.org/) _React Meetup.  Slides for that talk can be found here:_ [_https://better-context-with-hooks.netlify.com/_](https://better-context-with-hooks.netlify.com/)
 
-Context is one of the most useful tools a React developer can have in their kit. In short, it allows state (or anything else) to be passed around an application without relying on prop drilling. Any component in a context provider's tree can access values passed into the context, and utilize them from there. Many developers find context useful as a way to help manage application state without the need to bring in a library like Redux or MobX.
+Context is one of the most useful tools a React developer can have in their kit. In short, it allows state (or anything else) to be passed around an application without relying on prop drilling.  Any component in a context provider's tree can access values passed into the context, and utilize them from there.  Many developers find context useful as a way to help manage application state without the need to bring in a library like Redux or MobX.
 
 If you'd like this learn more about context and when you might or might not want to use it, check out the [the official React documentation](https://reactjs.org/docs/context.html).
 
-Historically, context relied on the render props pattern to give consumer components access to a provider's data. If you've ever used render props you'll probably agree that they're kind of a pain - specifically, they create extra levels of nesting and a **false hierarchy** that make viewing and debugging code difficult. With the introduction of React hooks, context has become _much_ easier to use. Let's take a look at some examples and see how the `useContext()` hook greatly simplifies implementing context.
+Historically, context relied on the render props pattern to give consumer components access to a provider's data.  If you've ever used render props you'll probably agree that they're kind of a pain - specifically, they create extra levels of nesting and a **false hierarchy** that make viewing and debugging code difficult. With the introduction of React hooks, context has become _much_ easier to use.  Let's take a look at some examples and see how the `useContext()` hook greatly simplifies implementing context.
 
 _(Note: these code blocks are abbreviated and don't contain full component code.  Please reference the talk slides linked above or the [GitHub repo](https://github.com/garethpbk/better-context-with-hooks) if you'd like to see the full code.)_
 
 Here's the created context render method of a component that has two pieces of state `name` and `hasBall` and one method `fetch`.  We pass these into a context provider's `value` prop.  Now everything in that context provider's tree can access the and method.
 
-```
+```javascript
 export const HookContext = createContext();
 
 render() {
@@ -36,7 +36,7 @@ render() {
 
 One more level down the trees, here's the `<ChildOne />` component.
 
-```
+```javascript
 const ChildOne = () => (
   <ChildTwo />
 );
@@ -44,7 +44,7 @@ const ChildOne = () => (
 
 And here's `<ChildTwo />` - notice how there's no prop drilling going on here.
 
-```
+```javascript
 const ChildTwo = () => (
   <MyContext.Consumer>
     {value => (
@@ -66,7 +66,8 @@ The consumer component allows us to access those values passed in, and utilize t
 Ok, this doesn't look too bad - `{value => ()}` is perfectly readable. But what if you need to access values from multiple context providers in a component that's nested in their trees? Bear with me, this gets a little ugly.
 
 Here's the render method for a component called `<ContextOneParent />`:
-```
+
+```javascript
 render() {
     return (
       <ContextOne.Provider value={this.state.firstValue}>
@@ -77,7 +78,8 @@ render() {
 ```
 
 Next `<ContextTwoParent /`>`:
-```
+
+```javascript
 render() {
     return (
       <ContextTwo.Provider value={this.state.secondValue}>
@@ -86,8 +88,10 @@ render() {
     );
   }
 ```
+
 And a third context provider component:
-```
+
+```javascript
 render() {
     return (
       <ContextThree.Provider value={this.state.thirdValue}>
@@ -98,7 +102,8 @@ render() {
 ```
 
 So we've got three different context providers now, nested inside of each other. The goal of this is to give `<ContextChild />` access to values from all three.
-```
+
+```javascript
 function ContextChild() {
   return (
     <ContextOne.Consumer>
@@ -140,7 +145,7 @@ This also creates a **false hierarchy** where it appears that the values of the 
 
 Let's see now how React hooks make context fun again.  In this example I'll show the whole component along with creating the context provider - we're also using `useState()` for state. Rather than returning a specific component, it also uses `props.children` to create a reusable component that can wrap anything.
 
-```
+```javascript
 export const HookContext = createContext();
 
 function HookProvider(props) {
@@ -172,7 +177,8 @@ function HookProvider(props) {
 ```
 
 Here's how to use this, with another component that returns the context component, wrapping its children:
-```
+
+```javascript
 const HookContainer = () => (
   <HookProvider>
     <HookFirstChild />
@@ -181,7 +187,8 @@ const HookContainer = () => (
 ```
 
 As in the first set of example components, the first child just returns another component:
-```
+
+```javascript
 const HookFirstChild = () => (
   <HookSecondChild />
 );
@@ -189,7 +196,7 @@ const HookFirstChild = () => (
 
 Finally we can see `useContext()` in action! It takes one value, the object created by `createContext()`, and allows for access to anything passed into that context provider's `value` prop, in this case destructured:
 
-```
+```javascript
 const HookSecondChild = () => {
   const { state, functions } = useContext(HookContext);
 
@@ -215,7 +222,7 @@ const HookSecondChild = () => {
 
 This isn't too much an improvement on render props, but I do think it's cleaner.  The real value starts to show itself when you have multiple contexts.  Remember this thing from above?
 
-```
+```javascript
 function ContextChild() {
   return (
     <ContextOne.Consumer>
@@ -244,7 +251,8 @@ function ContextChild() {
 ```
 
 Here's what it looks like with hooks:
-```
+
+```javascript
 function ContextHookChild() {
   const firstValue = useContext(ContextOne);
   const secondValue = useContext(ContextTwo);
@@ -259,6 +267,7 @@ function ContextHookChild() {
   );
 }
 ```
+
 😂😂😂
 
 No nesting, no render props...just values easily drawn out from `useContext()`, that can be used in the component.  Side-by-side, the improvement is easy to see:
@@ -267,7 +276,7 @@ No nesting, no render props...just values easily drawn out from `useContext()`, 
 
 To wrap up, be sure to note that one disadvantage of `useContext()` is that the context created by `createContext()` can't be destructured - you have to pass the whole thing into the hook.  This won't work:
 
-```
+```javascript
 const { Consumer, Provider } = createContext();
 ```
 
