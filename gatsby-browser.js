@@ -1,4 +1,5 @@
 import React from 'react';
+import 'prismjs/themes/prism-twilight.css';
 
 // import typeface
 import 'typeface-quicksand';

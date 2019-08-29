@@ -37,6 +37,11 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.8rem;
   }
 
+  /** temporarily use important until can make own prism theme */
+  pre {
+    font-size: 1.8rem !important;
+  }
+
   input, label, select {
     font-family: Quicksand, Arial, Helvetica, sans-serif;
   }
