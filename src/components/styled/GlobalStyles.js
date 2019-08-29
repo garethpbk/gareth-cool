@@ -33,8 +33,19 @@ const GlobalStyles = createGlobalStyle`
     font-size: 2.8rem;
   }
 
-  a, p {
+  a, p, span, input, label, select {
     font-size: 1.8rem;
+  }
+
+  a {
+    color: var(--blue);
+    font-weight: 500;
+
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   /** temporarily use important until can make own prism theme */

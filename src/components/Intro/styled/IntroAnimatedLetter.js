@@ -22,6 +22,7 @@ const wave = keyframes`
 const IntroAnimatedLetter = styled.span`
   display: inline-block;
 
+  font-size: 4.8rem;
   color: ${props => props.color};
 
   animation: ${wave} 0.5s cubic-bezier(0.36, 0.45, 0.63, 0.53)

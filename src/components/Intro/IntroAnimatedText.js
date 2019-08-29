@@ -30,8 +30,6 @@ function IntroAnimatedText({ text }) {
     return () => clearInterval(interval);
   }, []);
 
-  console.log(color);
-
   const lettersToAnimate = text.split('');
 
   return lettersToAnimate.map((letter, i) => (

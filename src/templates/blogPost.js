@@ -5,28 +5,32 @@ import Img from 'gatsby-image';
 // import components
 import { Layout, SEO } from '../components';
 
+// import styled components
+import { PageContent } from '../components/styled/page';
+
 function BlogPostTemplate({
   data: {
-    markdownRemark: {
+    post: {
       fields: { slug },
       frontmatter: { date, image, tags, title },
       html,
     },
   },
 }) {
-  console.log(slug);
   return (
     <Layout>
       <SEO title="blog post" />
-      <h1>{title}</h1>
-      <h3>{date}</h3>
-      <p>
-        {tags.map(tag => (
-          <span key={tag}>{tag}</span>
-        ))}
-      </p>
-      <Img fluid={image.childImageSharp.fluid} />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <PageContent>
+        <h1>{title}</h1>
+        <h3>{date}</h3>
+        <p>
+          {tags.map(tag => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </p>
+        <Img fluid={image.childImageSharp.fluid} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </PageContent>
     </Layout>
   );
 }
@@ -35,13 +39,13 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {
         slug
       }
       frontmatter {
-        date
+        date(formatString: "MMMM D, YYYY")
         tags
         title
         image {

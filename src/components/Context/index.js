@@ -1,11 +1,9 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 export const SuperCoolContext = createContext();
 
-function CoolContext({ children }) {
+function CoolContext({ children, location: { pathname } }) {
   const [animationPlayed, setAnimationPlayed] = useState(false);
-
-  console.log(animationPlayed);
 
   const value = {
     state: {
@@ -15,6 +13,12 @@ function CoolContext({ children }) {
       setAnimationPlayed,
     },
   };
+
+  useEffect(() => {
+    if (pathname !== '/') {
+      setAnimationPlayed(true);
+    }
+  }, []);
 
   return (
     <SuperCoolContext.Provider value={value}>

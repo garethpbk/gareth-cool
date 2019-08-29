@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 
+// import context
 import { SuperCoolContext } from '../Context';
 
 // import components
@@ -23,7 +24,7 @@ function Intro() {
       setTimeout(() => {
         setAnimationPlayed(true);
         setHeightProp('25vh');
-      }, 3000);
+      }, 1500);
     }
   }, []);
 

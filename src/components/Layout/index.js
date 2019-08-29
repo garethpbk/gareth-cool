@@ -1,16 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// import components
+import Nav from '../Nav';
+
 // import global styles
-import { Container, GlobalStyles } from '../styled';
+import { Container, CustomProperties, GlobalStyles } from '../styled';
 
 function Layout({ children }) {
   return (
     <>
+      <CustomProperties />
       <GlobalStyles />
-      <main>
-        <Container>{children}</Container>
-      </main>
+      <Container>
+        <Nav />
+        <main>{children}</main>
+      </Container>
     </>
   );
 }
