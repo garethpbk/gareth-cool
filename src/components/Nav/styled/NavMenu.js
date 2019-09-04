@@ -5,6 +5,8 @@ const NavMenu = styled.ul`
 
   list-style-type: none;
 
+  padding: 0;
+
   li {
     padding: 15px;
   }

@@ -17,7 +17,7 @@ function Nav() {
       <Link to="/">gbk.</Link>
       <NavMenu>
         <li>
-          <Link to="/projects">projects</Link>
+          <Link to="/#projects">projects</Link>
         </li>
         <li>
           <Link to="/blog">blog</Link>
