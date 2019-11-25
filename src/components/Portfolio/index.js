@@ -16,7 +16,7 @@ function Portfolio({
 }) {
   return (
     <PortfolioWrapper id="projects">
-      <h2>here's some stuff I made, give it a gander.</h2>
+      <h2>I'm Gareth and here's some stuff I made!</h2>
       <p>(working on making this site look pretty bear with me ty)</p>
       <h3>
         you can also <Link to="/blog">check out my blog posts</Link>,{' '}
