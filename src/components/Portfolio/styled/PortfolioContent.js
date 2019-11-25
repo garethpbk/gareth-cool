@@ -8,7 +8,7 @@ const PortfolioContent = styled.div`
   margin: 50px 0 0 0;
 
   @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   h4 {

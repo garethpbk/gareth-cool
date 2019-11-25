@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gareth-cool",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "gareth's cool website!",
+  "version": "0.6.9",
+  "author": "gareth bk <garethbk@gmail.com>",
   "dependencies": {
     "gatsby": "^2.13.70",
     "gatsby-image": "^2.2.9",
@@ -17,6 +17,7 @@
     "gatsby-remark-prismjs": "^3.3.9",
     "gatsby-remark-relative-images": "^0.2.3",
     "gatsby-source-filesystem": "^2.1.9",
+    "gatsby-transformer-json": "^2.2.19",
     "gatsby-transformer-remark": "^2.6.19",
     "gatsby-transformer-sharp": "^2.2.6",
     "netlify-cms-app": "^2.9.7",

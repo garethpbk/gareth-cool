@@ -6,7 +6,7 @@ const PortfolioWrapper = styled.section`
   align-items: center;
   justify-content: flex-start;
 
-  height: 100vh;
+  min-height: 100vh;
 
   padding: 100px 0 0 0;
 

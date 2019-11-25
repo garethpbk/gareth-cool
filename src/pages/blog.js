@@ -17,6 +17,39 @@ function BlogPage({
       <SEO title="blog" />
       <PageContent>
         <h1>thanks for checking out my posts!</h1>
+        <p>
+          I am in the process of moving stuff hosted externally here. In the
+          meantime, here's links to them:
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://dev.to/garethbk/deploying-graphql-yoga-with-now-20-p0m"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Deploying graphql-yoga with Now 2.0 (Dev)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://medium.com/@garethbk/functional-styled-components-theme-helpers-d99dd4087596"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Functional styled-components Theme Helpers (Medium)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://medium.com/open-graphql/rest-easy-with-apollo-client-388e26e7721c"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              REST Easy with Apollo Client (Medium for OPENGraphQL)
+            </a>
+          </li>
+        </ul>
         {edges.map(edge => {
           const {
             node: {

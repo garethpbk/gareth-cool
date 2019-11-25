@@ -1,11 +1,19 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import IndividualProject from './IndividualProject';
+
 // import styled components
 import { Container } from '../styled';
-import { PortfolioContent, PortfolioProject, PortfolioWrapper } from './styled';
+import { PortfolioContent, PortfolioWrapper } from './styled';
 
-function Portfolio() {
+function Portfolio({
+  projects: {
+    allPersonalProjectsJson,
+    allPresentationsJson,
+    allProfessionalProjectsJson,
+  },
+}) {
   return (
     <PortfolioWrapper id="projects">
       <h2>here's some stuff I made, give it a gander.</h2>
@@ -19,131 +27,25 @@ function Portfolio() {
         <PortfolioContent>
           <div>
             <h4>Professional Work</h4>
-            <PortfolioProject>
-              <a
-                href="https://onetrusthomeloans.com/bridge-loan"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                OneTrust Home Loans Bridge Loans
-              </a>
-              <p>Gatsby</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://onetrusthomeloans.com/lo/mglynn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                OneTrust Home Loans Loan Originator Websites
-              </a>
-              <p>React</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://onetrusthomeloans.com/branches"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                OneTrust Home Loans Branch Websites
-              </a>
-              <p>React, GraphQL</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://onetrusthomeloans.com/portfolio-loans"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                OneTrust Home Loans Portfolio Loans
-              </a>
-              <p>Gatsby</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://joinonetrust.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                OneTrust Home Loans Recruitment Website
-              </a>
-              <p>React</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://merc.soe.vcu.edu"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Virginia Commonwealth University Metropolitan Educational
-                Research Consortium Website
-              </a>
-              <p>TerminalFour</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://cobe.vcu.edu"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Virginia Commonwealth University Center for Emotional &
-                Behvioral Health Website
-              </a>
-              <p>WordPress</p>
-            </PortfolioProject>
+            <p>
+              Not listed: non-public work that I can't put here (but would love
+              to talk about). All repos for professional work private :(
+            </p>
+            {allProfessionalProjectsJson.nodes.map(project => (
+              <IndividualProject key={project.name} project={project} />
+            ))}
           </div>
           <div>
             <h4>Personal Projects</h4>
-            <PortfolioProject>
-              <a
-                href="https://antediluvianmag.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Weird Fiction Magazine Website
-              </a>
-              <p>Gatsby, WordPress</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://stravisualize.netlify.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Strava Visualizer & GraphQL Server
-              </a>
-              <p>React, GraphQL</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://ninelives.gareth.cool"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Nine Lives
-              </a>
-              <p>Phaser CE, Photoshop, Aesprite</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://grace-portfolio.netlify.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Artist Portfolio Website
-              </a>
-              <p>Gatsby, Contentful</p>
-            </PortfolioProject>
-            <PortfolioProject>
-              <a
-                href="https://grinning-moon.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Zine Library Website (NSFW)
-              </a>
-              <p>Gatsby, Contentful</p>
-            </PortfolioProject>
+            {allPersonalProjectsJson.nodes.map(project => (
+              <IndividualProject key={project.name} project={project} />
+            ))}
+          </div>
+          <div>
+            <h4>Presentations</h4>
+            {allPresentationsJson.nodes.map(project => (
+              <IndividualProject key={project.name} project={project} />
+            ))}
           </div>
         </PortfolioContent>
       </Container>

@@ -13,9 +13,10 @@ const AboutPage = () => (
       <h1>all about me!</h1>
       <p>
         I'm Gareth and I like making things for the internet. Mostly I work with
-        React but sometimes use Vue and normal ol' JavaScript and TypeScript if
-        I'm feeling strong. Used to do WordPress development, still do too.
-        Kinda like PHP. Big fan of making the web accessible for everyone.
+        React (lots o' Gatsby) but sometimes use Vue, Svelte, and normal ol'
+        JavaScript and TypeScript if I'm feeling strong. Used to do WordPress
+        development, still do too - PHP is my friend! Big fan of making the web
+        accessible for everyone.
       </p>
       <p>
         Outside of the computer I like to read books (fantasy, sci-fi, history,
@@ -35,9 +36,8 @@ const AboutPage = () => (
         >
           find me on Strava!
         </a>
-        ), write stories, cook, and have recently been getting back into guitar.
-        I have two cats and a great partner and a nice lil home in San Diego,
-        CA.
+        ), write stories, cook, and have recently been playing guitar. I have
+        two cats and a great partner and a nice lil home in San Diego, CA.
       </p>
     </PageContent>
   </Layout>
