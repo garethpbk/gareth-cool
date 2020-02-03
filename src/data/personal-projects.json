@@ -4,55 +4,63 @@
     "link": "http://ninelives.garethbk.com",
     "description": "A game about a cat, who can acquire flight and laser eyes. All pixel art (except the main cat) also done by me. WIP!",
     "tech": "Phaser CE",
-    "repo": "https://github.com/garethpbk/catgame"
+    "repo": "https://github.com/garethpbk/catgame",
+    "image": "NineLives"
   },
   {
     "name": "The Ruby Mouser",
     "link": "http://trm.garethbk.com",
     "description": "A game created to try Phaser 3 and learn more about TypeScript and animating pixel art. All pixel art also done by me. WIP!",
     "tech": "Phaser 3, TypeScript",
-    "repo": "https://github.com/garethpbk/the-ruby-mouser"
+    "repo": "https://github.com/garethpbk/the-ruby-mouser",
+    "image": ""
   },
   {
     "name": "Zendesk Chat Gatsby Plugin",
     "link": "https://www.npmjs.com/package/gatsby-plugin-zendesk-chat",
     "description": "A plugin to easily add Zendesk live chat to a Gatsby website. My first OSS package.",
     "tech": "Gatsby",
-    "repo": "https://github.com/garethpbk/gatsby-plugin-zendesk-chat"
+    "repo": "https://github.com/garethpbk/gatsby-plugin-zendesk-chat",
+    "image": ""
   },
   {
     "name": "Antediluvian",
     "link": "https://antediluvianmag.com",
     "description": "Weird fiction magazine in the vein of the pulps of yore. I also help edit and publish the magazine, and write for it.",
     "tech": "Gatsby",
-    "repo": "https://github.com/garethpbk/antediluvian"
+    "repo": "https://github.com/garethpbk/antediluvian",
+    "image": ""
   },
   {
     "name": "Stravisualizer",
     "link": "https://stravisualize.netlify.com/",
     "description": "Data visualizer and GraphQL server wrapper for Strava API. Requires a Strava account to check it out.",
     "tech": "React, GraphQL",
-    "repo": "https://github.com/garethpbk/stravisualize-2"
+    "repo": "https://github.com/garethpbk/stravisualize-2",
+    "image": ""
   },
   {
     "name": "Awesome Axes",
     "link": "https://awesome-axes.netlify.com/",
     "description": "A code challenge created for a job application screening, where the challenge was to create with React an image carousel (home page) and multi-image gallery (individual guitar pages) without using any libraries, on whatever topic desired. I picked guitars!",
     "tech": "React",
-    "repo": "https://github.com/garethpbk/awesome-axes"
+    "repo": "https://github.com/garethpbk/awesome-axes",
+    "image": ""
   },
   {
     "name": "Grace Huddleston Portfolio",
     "link": "https://grace-portfolio.netlify.com/",
     "description": "Artist portfolio website.",
     "tech": "Gatsby",
-    "repo": "https://github.com/garethpbk/grace-portfolio-gatsby"
+    "repo": "https://github.com/garethpbk/grace-portfolio-gatsby",
+    "image": ""
   },
   {
     "name": "Grinning Moon Zine Library",
     "link": "https://grinning-moon.org/",
     "description": "A library of scanned zines. NSFW, you've been warned!",
     "tech": "Gatsby",
-    "repo": "https://github.com/garethpbk/grinning-moon"
+    "repo": "https://github.com/garethpbk/grinning-moon",
+    "image": ""
   }
 ]

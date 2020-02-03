@@ -2,12 +2,15 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 // import components
-import { Intro, Layout, Portfolio, SEO } from '../components';
+import { Intro, IntroAbout, Layout, Portfolio, SEO } from '../components';
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <Intro />
+    <div>
+      <Intro />
+      <IntroAbout />
+    </div>
     <Portfolio projects={data} />
   </Layout>
 );

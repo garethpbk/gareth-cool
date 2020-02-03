@@ -4,27 +4,31 @@
     "link": "https://stay-suave-with-styled-components.netlify.com/",
     "description": "Why you should embrace CSS-in-JS and why styled-components is awesome.",
     "tech": "Presented at San Diego JS React Meetup, 9/11/2019.",
-    "repo": "https://github.com/garethpbk/stay-suave-with-styled-components"
+    "repo": "https://github.com/garethpbk/stay-suave-with-styled-components",
+    "image": "StaySuaveWithStyledComponents"
   },
   {
     "name": "A Talk About Talks",
     "link": "https://a-talk-about-talks.netlify.com/",
     "description": "A 'meta-talk' about why giving tech presentations is something you should do, plus some of my favorite tools for doing so.",
     "tech": " Presented at San Diego JS React Meetup, 4/10/2019.",
-    "repo": "https://github.com/garethpbk/a-talk-about-talks"
+    "repo": "https://github.com/garethpbk/a-talk-about-talks",
+    "image": "ATalkAboutTalks"
   },
   {
     "name": "Better Context with Hooks",
     "link": "https://better-context-with-hooks.netlify.com/",
     "description": "An intro to how React hooks greatly improve use of its Context API.",
     "tech": " Presented at San Diego JS React Meetup, 3/13/2019.",
-    "repo": "https://github.com/garethpbk/better-context-with-hooks"
+    "repo": "https://github.com/garethpbk/better-context-with-hooks",
+    "image": "BetterContextWithHooks"
   },
   {
     "name": "ES6 & Beyond",
     "link": "https://es6-and-beyond.netlify.com/",
     "description": "A not-so-brief overview of the new features ES6, ES7, etc. brought to the JavaScript language.",
     "tech": "Presented at San Diego JS Fundamental JS Meetup, 11/28/2018.",
-    "repo": "https://github.com/garethpbk/es6-and-beyond"
+    "repo": "https://github.com/garethpbk/es6-and-beyond",
+    "image": "Es6AndBeyond"
   }
 ]

@@ -8,7 +8,7 @@ const PortfolioWrapper = styled.section`
 
   min-height: 100vh;
 
-  padding: 100px 0 0 0;
+  padding: 25px 0 0 0;
 
   h3 {
     margin: 25px 0;

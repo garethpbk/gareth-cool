@@ -1,10 +1,12 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 const NavWrapper = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  height: 10vh;
 
   padding: 25px;
 

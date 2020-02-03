@@ -5,8 +5,6 @@ import Github from '../Icons/Github';
 function IndividualProject({ project }) {
   const [expanded, setExpanded] = useState(false);
 
-  console.log(project);
-
   return (
     <PortfolioProject key={project.name} expanded={expanded}>
       <a href={project.link} target="_blank" rel="noopener noreferrer">

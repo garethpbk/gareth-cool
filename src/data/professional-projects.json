@@ -1,38 +1,44 @@
 [
   {
-    "name": "OneTrust Home Loans Bridge Loans",
+    "name": "Portfolio Landing Pages",
     "link": "https://onetrusthomeloans.com/bridge-loan",
-    "description": "Landing page designed for lead generation. Designed as a customizable, extensible Gatsby template; have also built:<ul><li><a href='https://onetrusthomeloans.com/construction-home-loans' target='_blank' ref='noopener noreferrer'>Construction Home Loans</a></li><li><a href='https://onetrusthomeloans.com/condo-financing/' target='_blank' ref='noopener noreferrer'>Condo Loans</a></li><li><a href='https://onetrusthomeloans.com/business-and-commercial/' target='_blank' ref='noopener noreferrer'>Business and Commercial Loans</a></li><li><a href='https://onetrusthomeloans.com/fix-and-flip/' target='_blank' ref='noopener noreferrer'>Fix & Flip Loans</a></li><li><a href='https://onetrusthomeloans.com/bank-statement/' target='_blank' ref='noopener noreferrer'>Bank Statement Loans</a></li><li><a href='https://onetrusthomeloans.com/property-development/' target='_blank' ref='noopener noreferrer'>Land & Property Development Loans</a></li><li><a href='https://onetrusthomeloans.com/portfolio-loans/' target='_blank' ref='noopener noreferrer'>All Portfolio Loans</a></li>",
-    "tech": "Gatsby"
+    "description": "OneTrust Home Loans landing pages featuring flagship Portfolio Loan products. Designed as a customizable, extensible Gatsby template that is easily reusable for different loan types.",
+    "tech": "Gatsby",
+    "image": "ProfPortfolioLandingPages"
   },
   {
     "name": "OneTrust Home Loans Loan Originator Websites",
     "link": "https://onetrusthomeloans.com/lo/mglynn",
     "description": "Business sites for OneTrust's sales team. Designed as a template that can be used for every team member and multiple brands - other examples include <a href='https://onetrusthomeloans.com/lo/tkaraba' target='_blank' rel='noopener noreferrer'>lo/tkaraba</a> and <a href='https://tabormortgage.com/lo/jeremy' target='_blank' rel='noopener noreferrer'>lo/jeremy</a>",
-    "tech": "React, GraphQL"
+    "tech": "React, GraphQL",
+    "image": ""
   },
   {
     "name": "OneTrust Home Loans Branch Websites",
     "link": "https://onetrusthomeloans.com/branch/",
     "description": "Sites for OneTrust retail branches. Click on a city/state panel to check out that individual branch.",
-    "tech": "React, GraphQL"
+    "tech": "React, GraphQL",
+    "image": ""
   },
   {
     "name": "OneTrust Home Loans Recruitment Website",
     "link": "https://joinonetrust.com",
     "description": "Recruiting website designed to help grow OneTrust's sales team. Hilight of this project - building a custom method of vertical and horizontal scrolling animations.",
-    "tech": "React"
+    "tech": "React",
+    "image": ""
   },
   {
     "name": "Virginia Commonwealth University Metropolitan Education Research Consortium Website",
     "link": "https://merc.soe.vcu.edu",
     "description": "Homepage for a department of Virginia Commonwealth University's School of Education. Learning the TerminalFour CMS and how to implement a fully custom design within its limitation proved to be an interesting challenge.",
-    "tech": "TerminalFour, jQuery"
+    "tech": "TerminalFour, jQuery",
+    "image": ""
   },
   {
     "name": "Virginia Commonwealth University Center for Emotional & Behaviorial Health Website",
     "link": "https://cobe.vcu.edu",
     "description": "Homepage for a student wellness center at VCU. Built as a custom WordPress theme designed specifically to the institution's needs.",
-    "tech": "WordPress, jQuery"
+    "tech": "WordPress, jQuery",
+    "image": ""
   }
 ]

@@ -1,3 +1,4 @@
+import LayoutBorderWrapper from './LayoutBorderWrapper';
 import LayoutWrapper from './LayoutWrapper';
 
-export { LayoutWrapper };
+export { LayoutBorderWrapper, LayoutWrapper };
