@@ -8,7 +8,7 @@ const PortfolioTab = styled.div`
   height: ${props => (props.active ? '100%' : '75%')};
   width: 200px;
 
-  border: 1px solid black;
+  border: 1px solid var(--blue);
   border-radius: 3px 3px 0 0;
   border-bottom: 0;
 

@@ -5,10 +5,22 @@ import { graphql, useStaticQuery } from 'gatsby';
 import ProjectEntry from './ProjectEntry';
 
 // import image components
-import { ProfPortfolioLandingPages } from '../Images';
+import {
+  BranchSites,
+  MloSites,
+  ProfPortfolioLandingPages,
+  RecruitmentSite,
+  VcuCobe,
+  VcuMerc,
+} from '../Images';
 
 const professionalImages = {
+  BranchSites,
+  MloSites,
   ProfPortfolioLandingPages,
+  RecruitmentSite,
+  VcuCobe,
+  VcuMerc,
 };
 
 const Professional = () => {
@@ -26,17 +38,16 @@ const Professional = () => {
     }
   `);
 
-  const project = data.allProfessionalProjectsJson.nodes[0];
-
-  return (
+  return data.allProfessionalProjectsJson.nodes.map(project => (
     <ProjectEntry
+      key={project.name}
       name={project.name}
       link={project.link}
       description={project.description}
       tech={project.tech}
       Image={professionalImages[project.image]}
     />
-  );
+  ));
 };
 
 export default Professional;

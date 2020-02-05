@@ -25,7 +25,7 @@ const PortfolioContent = styled.div`
 
   background-color: #${props => setBackgroundColor(props.activeTab)};
 
-  border: 1px solid black;
+  border: 1px solid var(--blue);
   border-top: none;
 
   position: relative;
@@ -46,7 +46,7 @@ const PortfolioContent = styled.div`
     width: calc(100% - 798px);
     height: 1px;
 
-    background-color: #000;
+    background-color: var(--blue);
 
     position: absolute;
     top: 0px;
