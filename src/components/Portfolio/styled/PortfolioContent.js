@@ -8,6 +8,8 @@ function setBackgroundColor(active) {
       return 'b1bed5';
     case 'presentations':
       return 'dfdfdf';
+    case 'openSource':
+      return '88abc2';
     case 'pixels':
       return 'bfd8d5';
     default:

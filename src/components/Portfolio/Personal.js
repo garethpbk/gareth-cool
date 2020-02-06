@@ -5,10 +5,24 @@ import { graphql, useStaticQuery } from 'gatsby';
 import ProjectEntry from './ProjectEntry';
 
 // import image components
-import { NineLives } from '../Images';
+import {
+  Antediluvian,
+  AwesomeAxes,
+  GracePortfolio,
+  GrinningMoon,
+  NineLives,
+  Stravisualize,
+  TheRubyMouser,
+} from '../Images';
 
 const personalImages = {
+  Antediluvian,
+  AwesomeAxes,
+  GracePortfolio,
+  GrinningMoon,
   NineLives,
+  Stravisualize,
+  TheRubyMouser,
 };
 
 const Personal = () => {
@@ -26,17 +40,16 @@ const Personal = () => {
     }
   `);
 
-  const project = data.allPersonalProjectsJson.nodes[0];
-
-  return (
+  return data.allPersonalProjectsJson.nodes.map(project => (
     <ProjectEntry
+      key={project.name}
       name={project.name}
       link={project.link}
       description={project.description}
       tech={project.tech}
       Image={personalImages[project.image]}
     />
-  );
+  ));
 };
 
 export default Personal;

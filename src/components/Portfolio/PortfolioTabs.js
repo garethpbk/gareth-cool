@@ -27,6 +27,13 @@ const PortfolioTabs = ({ activeTab, setActiveTab }) => (
       Presentations
     </PortfolioTab>
     <PortfolioTab
+      active={activeTab === 'openSource'}
+      backgroundColor="88abc2"
+      onClick={() => setActiveTab('openSource')}
+    >
+      Open Source
+    </PortfolioTab>
+    <PortfolioTab
       active={activeTab === 'pixels'}
       backgroundColor="bfd8d5"
       onClick={() => setActiveTab('pixels')}

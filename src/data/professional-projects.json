@@ -21,23 +21,23 @@
     "image": "BranchSites"
   },
   {
-    "name": "OneTrust Home Loans Recruitment Website",
+    "name": "Recruitment Website",
     "link": "https://joinonetrust.com",
     "description": "Recruiting website designed to help grow OneTrust's sales team. Hilight of this project - building a custom method of vertical and horizontal scrolling animations.",
     "tech": "React",
     "image": "RecruitmentSite"
   },
   {
-    "name": "Virginia Commonwealth University Metropolitan Education Research Consortium Website",
+    "name": "Metropolitan Education Research Consortium Website",
     "link": "https://merc.soe.vcu.edu",
     "description": "Homepage for a department of Virginia Commonwealth University's School of Education. Learning the TerminalFour CMS and how to implement a fully custom design within its limitation proved to be an interesting challenge.",
     "tech": "TerminalFour, jQuery",
     "image": "VcuMerc"
   },
   {
-    "name": "Virginia Commonwealth University Center for Emotional & Behaviorial Health Website",
+    "name": "Center for Emotional & Behaviorial Health Website",
     "link": "https://cobe.vcu.edu",
-    "description": "Homepage for a student wellness center at VCU. Built as a custom WordPress theme designed specifically to the institution's needs.",
+    "description": "Homepage for a student wellness center at VCU. Built as a custom WordPress theme designed specifically to the institution's needs. This was the first professional WordPress theme I developed; it's based on Bones.",
     "tech": "WordPress, jQuery",
     "image": "VcuCobe"
   }

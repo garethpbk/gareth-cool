@@ -19,6 +19,10 @@ function renderActivePortfolioTab(activeTab) {
       return <Personal />;
     case 'presentations':
       return <Presentations />;
+    case 'openSource':
+      return <h2>TBD...</h2>;
+    case 'pixels':
+      return <h2>TBD...</h2>;
     default:
       return <Professional />;
   }

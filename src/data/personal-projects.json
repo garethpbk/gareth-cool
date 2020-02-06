@@ -13,15 +13,7 @@
     "description": "A game created to try Phaser 3 and learn more about TypeScript and animating pixel art. All pixel art also done by me. WIP!",
     "tech": "Phaser 3, TypeScript",
     "repo": "https://github.com/garethpbk/the-ruby-mouser",
-    "image": ""
-  },
-  {
-    "name": "Zendesk Chat Gatsby Plugin",
-    "link": "https://www.npmjs.com/package/gatsby-plugin-zendesk-chat",
-    "description": "A plugin to easily add Zendesk live chat to a Gatsby website. My first OSS package.",
-    "tech": "Gatsby",
-    "repo": "https://github.com/garethpbk/gatsby-plugin-zendesk-chat",
-    "image": ""
+    "image": "TheRubyMouser"
   },
   {
     "name": "Antediluvian",
@@ -29,15 +21,15 @@
     "description": "Weird fiction magazine in the vein of the pulps of yore. I also help edit and publish the magazine, and write for it.",
     "tech": "Gatsby",
     "repo": "https://github.com/garethpbk/antediluvian",
-    "image": ""
+    "image": "Antediluvian"
   },
   {
-    "name": "Stravisualizer",
+    "name": "Stravisualize",
     "link": "https://stravisualize.netlify.com/",
     "description": "Data visualizer and GraphQL server wrapper for Strava API. Requires a Strava account to check it out.",
     "tech": "React, GraphQL",
     "repo": "https://github.com/garethpbk/stravisualize-2",
-    "image": ""
+    "image": "Stravisualize"
   },
   {
     "name": "Awesome Axes",
@@ -45,7 +37,7 @@
     "description": "A code challenge created for a job application screening, where the challenge was to create with React an image carousel (home page) and multi-image gallery (individual guitar pages) without using any libraries, on whatever topic desired. I picked guitars!",
     "tech": "React",
     "repo": "https://github.com/garethpbk/awesome-axes",
-    "image": ""
+    "image": "AwesomeAxes"
   },
   {
     "name": "Grace Huddleston Portfolio",
@@ -53,7 +45,7 @@
     "description": "Artist portfolio website.",
     "tech": "Gatsby",
     "repo": "https://github.com/garethpbk/grace-portfolio-gatsby",
-    "image": ""
+    "image": "GracePortfolio"
   },
   {
     "name": "Grinning Moon Zine Library",
@@ -61,6 +53,6 @@
     "description": "A library of scanned zines. NSFW, you've been warned!",
     "tech": "Gatsby",
     "repo": "https://github.com/garethpbk/grinning-moon",
-    "image": ""
+    "image": "GrinningMoon"
   }
 ]

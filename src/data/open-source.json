@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Zendesk Chat Gatsby Plugin",
+    "link": "https://www.npmjs.com/package/gatsby-plugin-zendesk-chat",
+    "description": "A plugin to easily add Zendesk live chat to a Gatsby website. My first OSS package.",
+    "tech": "Gatsby",
+    "repo": "https://github.com/garethpbk/gatsby-plugin-zendesk-chat",
+    "image": "TheRubyMouser"
+  }
+]
