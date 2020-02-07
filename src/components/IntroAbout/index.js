@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 // import components
 import { Github, Twitter } from '../Icons';
@@ -21,8 +22,9 @@ function IntroAbout() {
         </p>
         <p>
           Check out <a href="#projects">some stuff I've made</a>, read my{' '}
-          <a href="/blog">blog posts</a>, or{' '}
-          <a href="#contact">get in touch!</a> You can even learn more about me
+          <Link to="/blog">blog posts</Link>, or{' '}
+          <Link to="/contact">get in touch!</Link> You can even{' '}
+          <Link to="/about">learn more about me </Link>
           if you want.
         </p>
         <p className="social">

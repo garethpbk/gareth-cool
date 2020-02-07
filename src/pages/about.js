@@ -39,6 +39,24 @@ const AboutPage = () => (
         ), write stories, cook, and have recently been playing guitar. I have
         two cats and a great partner and a nice lil home in San Diego, CA.
       </p>
+      <p>
+        I listen to{' '}
+        <a
+          href="https://www.last.fm/user/Evanm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          a lot of metal and also other kinds of music
+        </a>
+        .{' '}
+        <a
+          href="https://departurechandelier.bandcamp.com/album/antichrist-rise-to-power"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Forever faithful to the Emperor!
+        </a>
+      </p>
     </PageContent>
   </Layout>
 );
