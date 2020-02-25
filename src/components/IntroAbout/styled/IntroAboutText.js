@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
+// import media queries
+import { mediaQueries as mq } from '../../../util';
+
 const IntroAboutText = styled.div`
   flex-basis: 60%;
 
-  padding: 0 0 0 40px;
+  @media ${mq.lg} {
+    padding: 0 0 0 40px;
+  }
 
   p {
     font-size: 2rem;
@@ -15,7 +20,11 @@ const IntroAboutText = styled.div`
 
   .social {
     position: absolute;
-    bottom: 15vh;
+    bottom: 5vh;
+
+    @media ${mq.lg} {
+      bottom: 15vh;
+    }
 
     a {
       margin: 0 15px 0 0;

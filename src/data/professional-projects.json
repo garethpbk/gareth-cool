@@ -1,5 +1,19 @@
 [
   {
+    "name": "Sanctum WordPress Theme",
+    "link": "https://tabormortgage.com",
+    "description": "A custom WordPress theme designed to accommodate the needs of OneTrust Home Loans's joint ventures and DBAs.",
+    "tech": "WordPress, Svelte, JavaScript",
+    "image": "SanctumTheme"
+  },
+  {
+    "name": "LoanForce Insider",
+    "link": "",
+    "description": "Custom dashboard for giving real estate agents an inside look at their clients's loan information.",
+    "tech": "React",
+    "image": "LoanforceInsider"
+  },
+  {
     "name": "Portfolio Landing Pages",
     "link": "https://onetrusthomeloans.com/bridge-loan",
     "description": "OneTrust Home Loans landing pages featuring flagship Portfolio Loan products. Designed as a customizable, extensible Gatsby template that is easily reusable for different loan types.",

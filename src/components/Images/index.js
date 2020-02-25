@@ -7,10 +7,12 @@ import CarlsbadHalf from './CarlsbadHalf';
 import Es6AndBeyond from './Es6AndBeyond';
 import GracePortfolio from './GracePortfolio';
 import GrinningMoon from './GrinningMoon';
+import LoanforceInsider from './LoanforceInsider';
 import MloSites from './MloSites';
 import NineLives from './NineLives';
 import ProfPortfolioLandingPages from './ProfPortfolioLandingPages';
 import RecruitmentSite from './RecruitmentSite';
+import SanctumTheme from './SanctumTheme';
 import StaySuaveWithStyledComponents from './StaySuaveWithStyledComponents';
 import Stravisualize from './Stravisualize';
 import TheRubyMouser from './TheRubyMouser';
@@ -27,10 +29,12 @@ export {
   Es6AndBeyond,
   GracePortfolio,
   GrinningMoon,
+  LoanforceInsider,
   MloSites,
   NineLives,
   ProfPortfolioLandingPages,
   RecruitmentSite,
+  SanctumTheme,
   StaySuaveWithStyledComponents,
   Stravisualize,
   TheRubyMouser,

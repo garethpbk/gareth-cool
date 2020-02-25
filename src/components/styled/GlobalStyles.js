@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+// import media queries
+import { mediaQueries as mq } from '../../util';
+
 const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -24,7 +27,11 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: 4.8rem;
+    font-size: 2.4rem;
+
+    @media ${mq.lg} {
+      font-size: 4.8rem;
+    }
   }
 
   h2 {

@@ -25,7 +25,7 @@ function BlogPostTemplate({
         <h3>{date}</h3>
         <p>
           {tags.map(tag => (
-            <span key={tag}>{tag}</span>
+            <span key={tag}>#{tag} </span>
           ))}
         </p>
         <Img fluid={image.childImageSharp.fluid} />

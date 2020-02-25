@@ -7,18 +7,22 @@ import ProjectEntry from './ProjectEntry';
 // import image components
 import {
   BranchSites,
+  LoanforceInsider,
   MloSites,
   ProfPortfolioLandingPages,
   RecruitmentSite,
+  SanctumTheme,
   VcuCobe,
   VcuMerc,
 } from '../Images';
 
 const professionalImages = {
   BranchSites,
+  LoanforceInsider,
   MloSites,
   ProfPortfolioLandingPages,
   RecruitmentSite,
+  SanctumTheme,
   VcuCobe,
   VcuMerc,
 };

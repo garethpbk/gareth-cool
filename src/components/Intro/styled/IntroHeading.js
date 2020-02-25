@@ -22,6 +22,8 @@ const IntroHeading = styled.h1`
   animation: ${wooooo} 1s ease-in-out;
 
   transform-origin: center;
+
+  text-align: center;
 `;
 
 export default IntroHeading;
