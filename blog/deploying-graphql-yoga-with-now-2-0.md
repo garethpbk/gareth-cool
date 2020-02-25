@@ -3,7 +3,8 @@ path: deploying-graphql-yoga-with-now-2
 date: 2020-02-25T22:47:11.040Z
 title: Deploying graphql-yoga with Now 2.0
 tags:
-  - graphql deployment
+  - graphql
+  - deployment
 image: /assets/pokeapi_256.png
 ---
 [graphql-yoga](https://github.com/prisma/graphql-yoga) makes it easy to get a lightweight, fully-featured GraphQL server up and running. Zeit's [Now](https://zeit.co/now) offers a cloud deployment platform that utilizes serverless infrastructure to power your applications. Let's look at how to these can be combined to deploy a GraphQL server that takes advantage of some of Now's features, as well as noting some potential pitfalls.
