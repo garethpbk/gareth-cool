@@ -16,9 +16,9 @@ function Nav() {
     <NavWrapper opacity={animationPlayed ? 1 : 0}>
       <Link to="/">gbk.</Link>
       <NavMenu>
-        <li>
+        {/* <li>
           <Link to="/#projects">projects</Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/blog">blog</Link>
         </li>

@@ -27,15 +27,6 @@ const ContactPage = () => (
       </p>
       <p>
         <a
-          href="https://twitter.com/garethbk"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Twitter
-        </a>
-      </p>
-      <p>
-        <a
           href="https://www.linkedin.com/in/gareth-bromser-kloeden-77b93745/"
           target="_blank"
           rel="noopener noreferrer"

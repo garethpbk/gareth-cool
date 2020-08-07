@@ -2,16 +2,22 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 // import components
-import { Github, Twitter } from '../Icons';
+import { Github, LinkedIn } from '../Icons';
 import { CarlsbadHalf } from '../Images';
 
 // import styled components
-import { IntroAboutText, IntroAboutWrapper } from './styled';
+import {
+  IntroAboutText,
+  IntroAboutImageWrapper,
+  IntroAboutWrapper,
+} from './styled';
 
 function IntroAbout() {
   return (
     <IntroAboutWrapper>
-      <CarlsbadHalf />
+      <IntroAboutImageWrapper>
+        <CarlsbadHalf />
+      </IntroAboutImageWrapper>
       <IntroAboutText>
         <p>
           <span className="heavy">Hi there!</span> I'm Gareth and I like making
@@ -21,9 +27,8 @@ function IntroAbout() {
           fan of making the web accessible for everyone.
         </p>
         <p>
-          Check out <a href="#projects">some stuff I've made</a>, read my{' '}
-          <Link to="/blog">blog posts</Link>, or{' '}
-          <Link to="/contact">get in touch!</Link> You can even{' '}
+          You can read my <Link to="/blog">blog posts and presentations</Link>,
+          or <Link to="/contact">get in touch!</Link> Or even{' '}
           <Link to="/about">learn more about me </Link>
           if you want.
         </p>
@@ -36,11 +41,11 @@ function IntroAbout() {
             <Github />
           </a>
           <a
-            href="https://twitter.com/garethbk"
+            href="https://www.linkedin.com/in/gareth-bromser-kloeden-77b93745/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Twitter />
+            <LinkedIn />
           </a>
         </p>
       </IntroAboutText>

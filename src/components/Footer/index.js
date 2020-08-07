@@ -8,7 +8,7 @@ function Footer() {
   return (
     <FooterWrapper>
       <Container>
-        <p>© 2019 gareth bk</p>
+        <p>© {new Date().getFullYear()} gareth bk</p>
       </Container>
     </FooterWrapper>
   );
