@@ -94,6 +94,15 @@ function BlogPage({
           </li>
           <li>
             <a
+              href="https://a-talk-about-talks.netlify.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              A Talk About Talks <em>(my favorite presentation I've given!)</em>
+            </a>
+          </li>
+          <li>
+            <a
               href="https://es6-and-beyond.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
